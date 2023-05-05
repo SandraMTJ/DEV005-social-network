@@ -62,5 +62,5 @@ A lo largo del Proyecto se realizaron test de usabilidad con usuarios amantes de
 ## Url Proyecto
 | Despliegue | URL |
 | ------ | ------ |
-| Vercel | https://mascoteando-andrenavas.vercel.app/ |
+| Vercel | https://mascoteando.vercel.app/ |
 
