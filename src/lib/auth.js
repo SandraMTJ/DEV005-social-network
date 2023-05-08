@@ -8,6 +8,11 @@ import {
 
 import { auth } from './index.js';
 
+/*
+la función loginEmail se utiliza para manejar el inicio de sesión de un usuario utilizando
+ correo electrónico y contraseña. Captura posibles errores durante el proceso de inicio de sesión y
+ muestra mensajes de error específicos en elementos del DOM proporcionados.
+*/
 export const loginEmail = (email, password, errorEmail, errorPassword) => {
   signInWithEmailAndPassword(auth, email, password)
     .then(() => {
@@ -26,6 +31,9 @@ export const loginEmail = (email, password, errorEmail, errorPassword) => {
     });
 };
 
+/* La función userRegister se utiliza para manejar el registro de un nuevo usuario en un sistema
+utilizando correo electrónico y contraseña. Captura posibles errores durante el proceso de registro
+y muestra mensajes de error específicos en elementos del DOM proporcionados. */
 export const userRegister = (email, password, errorEmail, errorPassword) => {
   createUserWithEmailAndPassword(auth, email, password)
     .then(() => {
@@ -46,7 +54,7 @@ export const userRegister = (email, password, errorEmail, errorPassword) => {
     });
 };
 
-// Función cerrar que se exporta a home
+// Función cerrar sesión de usuario actual con auth desde index.js
 export const exit = () => {
   signOut(auth).then(() => {
 
@@ -55,8 +63,10 @@ export const exit = () => {
   });
 };
 
-export const provider = new GoogleAuthProvider();
+/* Se define la instancia GoogleAuthProvider como proveedor de autenticación y proporciona la
+función 'loginGoogle' para iniciar sesión con cuenta Google */
 
+export const provider = new GoogleAuthProvider();
 export const loginGoogle = () => {
   signInWithPopup(auth, provider)
     .then(() => {
