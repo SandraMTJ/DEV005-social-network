@@ -53,7 +53,7 @@ export function home() {
     </header>
     <section class="containerForm">
       <form id="post-form" class="post-form">
-        <textarea type="text" name="txtMascotiemos" class="txtMascotiemos" id="txtMascotiemos" rows="3" placeholder="Mascotiemos..." required></textarea>
+        <textarea type="text" name="txtMascotiemos" class="txtMascotiemos" id="txtMascotiemos" rows="2" cols="1" maxlength="500" placeholder="Mascotiemos..." required></textarea>
         <button id="btnPost" class="btnPost"><img class="btnPostImg" src="./img/btnPublicar.png" alt="post"></img></button>
       </form>
       <div id ="containerPost" class ="containerPost"></div>
